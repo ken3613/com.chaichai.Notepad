@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notepad</string>
+    <string name="welcome_note">欢迎使用Notepad记事本，无论你是记事、写日记、记待办还是灵感来了要写脑洞、感悟，都可以随时随手记录下来。</string>
+    <string name="welcome_note2">更多隐藏功能等你发现~。</string>
+</resources>
