@@ -15,9 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     boolean searchClicked = false;
-    private LinearLayout layout_C1;
-    private LinearLayout layout_C2;
-
+    private EditText etx_search;
 
     @Override
     public void onClick(View view) {
@@ -34,34 +32,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Global gb = (Global)getApplicationContext();
+
+        if(gb.getFirstRun()){
+            LinearLayout linearLayout_Top = findViewById(R.id.linearLayout_Top);
+            LinearLayout linearLayout_Bottom = findViewById(R.id.linearLayout_Bottom);
+
+            linearLayout_Top.setBackgroundColor(gb.getThemeColor());
+            linearLayout_Bottom.setBackgroundColor(gb.getThemeColor());
+        }else{
+            gb.setThemeColor(R.color.colorThemeOrange);
+        }
+        gb.setRun();
 
 
 
-        final Button btn_js = findViewById(R.id.bt_js);
-        final Button btn_db = findViewById(R.id.bt_db);
-        final Button btn_dsr = findViewById(R.id.bt_dsr);
-        final Button btn_wd = findViewById(R.id.bt_wd);
-        //final Button btn_sy = findViewById(R.id.bt_sy);
+
+        Button btn_js = findViewById(R.id.bt_js);
+        Button btn_db = findViewById(R.id.bt_db);
+        Button btn_dsr = findViewById(R.id.bt_dsr);
+        Button btn_wd = findViewById(R.id.bt_wd);
         final ImageButton ibtn_search = findViewById(R.id.ibt_search);
-        final EditText etx_search = findViewById(R.id.et_search);
+        etx_search = findViewById(R.id.et_search);
         final ImageButton ibtn_write = findViewById(R.id.ibt_write);
-
-
-        //final TextView ejs_1 = findViewById(R.id.js_1);
-
-        //ejs_1.setOnClickListener(this);
         etx_search.setVisibility(View.GONE);
 
         final LinearLayout layout_js = findViewById(R.id.layout_js);
-        layout_C1=(LinearLayout) layout_js.getChildAt(0);
-        layout_C2=(LinearLayout) layout_js.getChildAt(1);
+        LinearLayout layout_C1 = (LinearLayout) layout_js.getChildAt(0);
+        LinearLayout layout_C2 = (LinearLayout) layout_js.getChildAt(1);
 
-        for(int i=0;i<layout_C1.getChildCount();i++){
+        for(int i = 0; i< layout_C1.getChildCount(); i++){
             View v = layout_C1.getChildAt(i);
             TextView tv = (TextView) v;
             tv.setOnClickListener(this);
         }
-        for(int i=0;i<layout_C2.getChildCount();i++){
+        for(int i = 0; i< layout_C2.getChildCount(); i++){
             View v = layout_C2.getChildAt(i);
             TextView tv = (TextView) v;
             tv.setOnClickListener(this);

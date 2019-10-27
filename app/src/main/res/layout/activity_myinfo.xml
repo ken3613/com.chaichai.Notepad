@@ -2,15 +2,49 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myInfo_layout_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".myinfo">
 
+    <Button
+        android:id="@+id/bt_ChangeBlue"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="304dp"
+        android:layout_marginLeft="304dp"
+        android:layout_marginTop="520dp"
+        android:background="@color/colorThemeBlue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_ChangeOrange"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="520dp"
+        android:background="@color/colorThemeOrange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_ChangeRed"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="520dp"
+        android:background="@color/colorThemeRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout_Bottom"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorTop"
+        android:background="@color/colorThemeOrange"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp">
@@ -60,10 +94,10 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/myinfo_textView_Top"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/colorTop"
+        android:background="@color/colorThemeOrange"
         android:gravity="center"
         android:text="个人中心"
         android:textColor="@android:color/background_light"
@@ -93,4 +127,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

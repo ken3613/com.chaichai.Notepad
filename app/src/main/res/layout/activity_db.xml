@@ -7,10 +7,10 @@
     tools:context=".db">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout_Top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorTop"
+        android:background="@color/colorThemeOrange"
         android:orientation="horizontal"
         android:paddingLeft="8dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,10 +60,10 @@
         app:srcCompat="@drawable/search" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout_Bottom"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorTop"
+        android:background="@color/colorThemeOrange"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp">

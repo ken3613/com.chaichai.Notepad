@@ -9,5 +9,7 @@
     <color name="colorTextGrey">#F0F2F2F2</color>
     <color name="colorLightGreen">#77C2AE</color>
     <color name="colorDarkYellow">#FFCC22</color>
-    <color name="colorTop">#F4A460</color>
+    <color name="colorThemeOrange">#F4A460</color>
+    <color name="colorThemeRed">#EB4A4A</color>
+    <color name="colorThemeBlue">#0394F4</color>
 </resources>

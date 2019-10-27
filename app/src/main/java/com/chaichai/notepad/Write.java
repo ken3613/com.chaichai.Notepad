@@ -16,7 +16,6 @@ public class Write extends AppCompatActivity {
 
     private Button btn_menu;
     private EditText edt_write;
-    private ImageButton ibtn_back;
     private ImageButton ibtn_menu;
 
     @Override
@@ -31,12 +30,13 @@ public class Write extends AppCompatActivity {
                 showPopupMenu();
             }
         });
-        ibtn_back = findViewById(R.id.ibt_back);
+        ImageButton ibtn_back = findViewById(R.id.ibt_back);
 
         String context=getIntent().getStringExtra("context");
-        if(!context.isEmpty()){
+        if(!(context==null)){
             edt_write.setText(context);
         }
+
 
         //back OnClick
         ibtn_back.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,7 @@ public class Write extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.zstj:
                         int textLen=edt_write.getText().toString().length();
-                        Toast.makeText(Write.this,"共："+Integer.toString(textLen)+"字",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Write.this,"共"+Integer.toString(textLen)+"字",Toast.LENGTH_SHORT).show();
 
                         return true;
                 }
