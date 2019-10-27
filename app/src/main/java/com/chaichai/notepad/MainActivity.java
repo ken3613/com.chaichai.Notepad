@@ -1,6 +1,8 @@
 package com.chaichai.notepad;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             gb.setThemeColor(R.color.colorThemeOrange);
         }
         gb.setRun();
+
+
 
 
 

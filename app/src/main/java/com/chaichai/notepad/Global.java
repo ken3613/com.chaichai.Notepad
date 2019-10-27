@@ -10,7 +10,7 @@ public class Global extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        setThemeColor(Color.rgb(244,164,96));
+
     }
 
     public void setRun(){
