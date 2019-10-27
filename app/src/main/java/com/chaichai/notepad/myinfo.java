@@ -21,12 +21,11 @@ public class myinfo extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myinfo);
-        gb = (Global)getApplicationContext();
+        gb = (Global)getApplication();
+
 
 
         Button btn_sy = findViewById(R.id.bt_sy);
-        Button btn_ChangeBule = findViewById(R.id.bt_ChangeBlue);
-        ColorDrawable colorDrawable = (ColorDrawable) btn_ChangeBule.getBackground();
         ConstraintLayout layoutMain = findViewById(R.id.myInfo_layout_main);
         for (int i=0;i<layoutMain.getChildCount();i++){
             View v = layoutMain.getChildAt(i);

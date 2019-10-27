@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Global gb = (Global)getApplicationContext();
+        Global gb = (Global)getApplication();
 
         if(gb.getFirstRun()){
             LinearLayout linearLayout_Top = findViewById(R.id.linearLayout_Top);

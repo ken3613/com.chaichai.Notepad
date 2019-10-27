@@ -3,7 +3,7 @@
     package="com.chaichai.notepad">
 
     <application
-        android:name="com.chaichai.notepad.Global"
+        android:name="Global"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
