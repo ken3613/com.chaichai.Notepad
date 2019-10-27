@@ -1,5 +1,6 @@
 package com.chaichai.notepad;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -47,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         gb.setRun();
 
+        DatabaseOpen dbop = new DatabaseOpen(this,"App_setting",null,1);
+        SQLiteDatabase db = dbop.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("context","test");
+        db.insert("note",null,cv);
 
 
 
